@@ -4,6 +4,7 @@
 	const messages = {
 		"Incorrect IMDb ID.": "",
 		"Too many results.": "Please be more specific with your search.",
+    "Movie not found!": "Movie not found!"
 	}
 </script>
 
