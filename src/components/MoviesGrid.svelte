@@ -1,11 +1,11 @@
 <script>
 	import Movie from "./Movie.svelte";
 
-  export let movies = {}
+  export let movies = []
 </script>
 
 <div class="columns-3xs">
-  {#each movies.Search as movie}
+  {#each movies as movie}
     <Movie {movie} />
   {/each}
 </div>
