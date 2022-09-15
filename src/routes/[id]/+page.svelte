@@ -45,9 +45,11 @@
       <p>
         <strong>Awards:</strong> {data.Awards}
       </p>
-      <p>
-        <strong>Budget: </strong> {data.BoxOffice}
-      </p>
+      {#if data.BoxOffice}
+        <p>
+          <strong>Budget: </strong> {data.BoxOffice}
+        </p>
+      {/if}
 
       <div class="h-[1px] bg-gray-200 my-4"></div>
 
