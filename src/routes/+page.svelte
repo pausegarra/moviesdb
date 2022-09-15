@@ -2,6 +2,7 @@
 	import MoviesGrid from "../components/MoviesGrid.svelte"
 	import SearchBar from "../components/SearchBar.svelte"
   import Error from '../components/Error.svelte'
+  import Spinner from '../components/Spinner.svelte'
   
   let search = ""
   $: movies = getMovies(search)
@@ -25,7 +26,7 @@
     <SearchBar {setSearch} />
 
 		{#await movies}
-    Waiting...
+    <Spinner />
 		{:then movies}
       {#if movies.Response === 'False'}
         <Error error={movies.Error} />
