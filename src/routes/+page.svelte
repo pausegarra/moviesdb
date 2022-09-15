@@ -1,6 +1,7 @@
 <script>
-	import MoviesGrid from "../components/MoviesGrid.svelte";
-	import SearchBar from "../components/SearchBar.svelte";
+	import MoviesGrid from "../components/MoviesGrid.svelte"
+	import SearchBar from "../components/SearchBar.svelte"
+  import Error from '../components/Error.svelte'
   
   let search = ""
   $: movies = getMovies(search)
@@ -26,7 +27,11 @@
 		{#await movies}
     Waiting...
 		{:then movies}
-      <MoviesGrid movies={movies.Search} />
+      {#if movies.Response === 'False'}
+        <Error error={movies.Error} />
+      {:else}
+        <MoviesGrid movies={movies.Search} />
+      {/if}
 		{:catch error}
 			<p style="color: red">{error.message}</p>
 		{/await}
