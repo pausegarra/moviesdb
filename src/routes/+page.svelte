@@ -3,18 +3,24 @@
 	import SearchBar from "../components/SearchBar.svelte"
   import Error from '../components/Error.svelte'
   import Spinner from '../components/Spinner.svelte'
+  import Paginator from '../components/Paginator.svelte'
   
   let search = ""
-  $: movies = getMovies(search)
+  let page = 1
+  $: movies = getMovies(search, page)
 
-  async function getMovies(search) {
-    const res = await fetch(`https://www.omdbapi.com/?apikey=11aa9d2f&s=${search}`)
+  async function getMovies(search, page) {
+    const res = await fetch(`https://www.omdbapi.com/?apikey=11aa9d2f&s=${search}&page=${page}`)
     const data = await res.json()
     return data
   }
 
   function setSearch(e) {
     search = e.target.value
+  }
+
+  function setPage(newPage) {
+    page = newPage
   }
 </script>
 
@@ -32,6 +38,11 @@
         <Error error={movies.Error} />
       {:else}
         <MoviesGrid movies={movies.Search} />
+        <Paginator
+					{setPage}
+					current={page}
+					totalResults={movies.totalResults}
+				/>
       {/if}
 		{:catch error}
 			<p style="color: red">{error.message}</p>
