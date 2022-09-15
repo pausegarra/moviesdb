@@ -13,11 +13,9 @@
 >
 	<img src={movie.Poster} alt="" class="w-full" />
 	<div class="p-6">
-			<span>{movie.Year}</span>
+			<span class="bg-red-200 text-red-800 px-2.5 rounded py-1 text-xs">{movie.Year}</span>
 		<span
-			class="bg-{color[movie.Type]}-200 text-{color[
-				movie.Type
-			]}-800 px-2.5 rounded py-1 text-xs">{movie.Type}</span
+			class="bg-{color[movie.Type]}-200 text-{color[movie.Type]}-800 px-2.5 rounded py-1 text-xs">{movie.Type}</span
 		>
 		<h4 class="m-0 font-bold text-2xl">{movie.Title}</h4>
 	</div>
