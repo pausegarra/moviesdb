@@ -1,5 +1,9 @@
 <script>
+	import { text } from "svelte/internal";
+
+
   export let movieType
+  export let textSize = "xs"
 
   let colors = {
 		movie: "blue",
@@ -10,4 +14,4 @@
   $: color = colors[movieType]
 </script>
 
-<span class="bg-{color}-200 text-{color}-800 px-2.5 rounded py-1 text-xs">{movieType}</span>
+<span class="bg-{color}-200 text-{color}-800 px-2.5 rounded py-1 text-{textSize}">{movieType}</span>
