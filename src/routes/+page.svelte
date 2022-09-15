@@ -1,4 +1,6 @@
 <script>
+	import MoviesGrid from "../components/MoviesGrid.svelte";
+
   let movies = getMovies()
 
   async function getMovies() {
@@ -16,9 +18,7 @@
 		{#await movies}
     Waiting...
 		{:then movies}
-      {#each movies.Search as movie}
-        {movie.Title}
-      {/each}
+      <MoviesGrid {movies} />
 		{:catch error}
 			<p style="color: red">{error.message}</p>
 		{/await}
