@@ -7,8 +7,8 @@
 	}
 </script>
 
-<div
-	to={`${movie.imdbID}`}
+<a
+	href={`${movie.imdbID}`}
 	class="block bg-[#FFFFFF] hover:bg-[#F7CE68] ease-in-out duration-200 rounded-lg shadow-md mb-4 overflow-hidden"
 >
 	<img src={movie.Poster} alt="" class="w-full" />
@@ -19,4 +19,4 @@
 		>
 		<h4 class="m-0 font-bold text-2xl">{movie.Title}</h4>
 	</div>
-</div>
+</a>
