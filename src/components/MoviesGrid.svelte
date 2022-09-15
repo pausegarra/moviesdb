@@ -4,6 +4,8 @@
   export let movies = {}
 </script>
 
-{#each movies.Search as movie}
-  <Movie {movie} />
-{/each}
+<div class="columns-3xs">
+  {#each movies.Search as movie}
+    <Movie {movie} />
+  {/each}
+</div>
