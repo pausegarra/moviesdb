@@ -25,7 +25,7 @@
 </script>
 
 <div class="container mx-auto py-9 px-4 md:px-0">
-		<h1 class="text-center text-4xl mb-9">
+		<h1 class="text-center text-4xl mb-9 text-gray-900">
 			movies<span class="font-bold">db</span>
 		</h1>
 

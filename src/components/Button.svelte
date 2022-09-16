@@ -4,7 +4,7 @@
 </script>
 
 <button
-	class={`bg-gradient-to-br from-blue-900 to-purple-500 hover:to-purple-300 px-2 py-1 rounded text-white text-xl`}
+	class={`bg-gray-900 hover:bg-gray-500 ease-in-out duration-200 px-2 py-1 rounded text-white text-xl`}
 	on:click={() => setPage(page)}
 >
 	<slot />

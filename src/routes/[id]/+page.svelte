@@ -8,12 +8,12 @@
 <div class="container mx-auto py-9 px-4 md:px-0">
   <h1 class="text-5xl mb-9 font-bold text-center">{data.Title}</h1>
 
-  <div class="grid gird-cols-1 lg:grid-cols-2 p-8 bg-white rounded">
+  <div class="grid gird-cols-1 lg:grid-cols-2 p-8 borde rounded">
     <div class="flex justify-center items-center">
       <img src={data.Poster} class="rounded" alt="">
     </div>
     <div>
-      <h2 class="text-3xl mb-4">Movie data</h2>
+      <h2 class="text-3xl mb-4 text-gray-900">Data</h2>
       <p>
         <span class="bg-red-200 text-red-800 px-2.5 rounded py-1 text-md">{data.Year}</span>
         <Badge movieType={data.Type} textSize="md" />
