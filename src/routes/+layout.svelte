@@ -1,7 +1,9 @@
 <script>
   import "../app.css";
+	import PageLoader from "../components/PageLoader.svelte";
 </script>
 
+<PageLoader />
 <div>
   <slot />
 </div>
