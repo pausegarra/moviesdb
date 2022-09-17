@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>{data.Title} | MoviesDB by Pau Segarra</title>
+</svelte:head>
+
 <script>
 	import Badge from '../../components/Badge.svelte';
 

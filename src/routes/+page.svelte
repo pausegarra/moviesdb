@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>MoviesDB by Pau Segarra</title>
+  <meta name="description" content="A simple web page where you can search for your favorite movie!">
+</svelte:head>
+
 <script>
 	import MoviesGrid from "../components/MoviesGrid.svelte"
 	import SearchBar from "../components/SearchBar.svelte"
