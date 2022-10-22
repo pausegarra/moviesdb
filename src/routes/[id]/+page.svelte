@@ -10,7 +10,7 @@
 </script>
 
 <div class="container mx-auto py-9 px-4 md:px-0">
-  <h1 class="text-5xl mb-9 font-bold text-center">{data.Title}</h1>
+  <h1 class="text-5xl mb-9 font-bold text-center text-[#00004c]">{data.Title}</h1>
 
   <div class="grid gird-cols-1 lg:grid-cols-2 p-8 borde rounded">
     <div class="flex justify-center items-center">
